@@ -1,0 +1,8 @@
+- name: copy inventory file to other servers
+  host: servers
+  become: True
+  tasks:
+  - name: copying files to server
+    copy: 
+      src: /home/ec2-user/inventory.txt
+      dest: /home/ec2-user/
